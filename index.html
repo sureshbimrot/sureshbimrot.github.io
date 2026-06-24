@@ -226,7 +226,22 @@
         url: link
     });
 }
-        
+
+        function fitName() {
+    const nameEl = document.getElementById("dispName");
+
+    let size = 48; // starting font size
+
+    nameEl.style.fontSize = size + "px";
+
+    while (
+        nameEl.scrollWidth > nameEl.clientWidth &&
+        size > 18
+    ) {
+        size--;
+        nameEl.style.fontSize = size + "px";
+    }
+                }
     </script>
 </body>
 </html>
