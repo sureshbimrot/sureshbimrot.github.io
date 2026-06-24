@@ -102,11 +102,11 @@
             <div class="box-body"><div class="ribbon ribbon-v"></div></div>
         </div>
         <h2 style="font-weight:300;">A Special Gift for You!</h2>
-        <p class="hint">TAP OR SHAKE TO OPEN</p>
+        <p class="hint">TAP TO OPEN</p>
     </div>
 
     <div id="wish-card">
-        <img src="my_logo.png" class="clean-logo" alt="Logo">
+        <img src="logo.png" class="clean-logo" alt="Logo">
         <div class="brand-text">WELCOME FRIENDS 🤗</div>
         <p style="opacity: 0.7;">Special Wish from</p>
         <h1 class="name-display" id="dispName">Suresh</h1>
@@ -154,13 +154,6 @@
             requestAnimationFrame(loop);
         }
         loop();
-
-        // 2. SHAKE DETECTION
-        window.addEventListener('devicemotion', (e) => {
-            if (isOpened) return;
-            let acc = e.accelerationIncludingGravity;
-            if (acc.x > 18 || acc.y > 18 || acc.z > 18) openBox();
-        });
 
         // 3. MAIN OPENING LOGIC
         const params = new URLSearchParams(window.location.search);
