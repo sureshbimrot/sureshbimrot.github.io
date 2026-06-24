@@ -242,20 +242,19 @@
 
 function fitName() {
     const nameEl = document.getElementById("dispName");
-    const name = nameEl.innerText;
 
-    if(name.length > 15){
-        nameEl.style.fontSize = "38px";
-    }
+    let size = 55;
 
-    if(name.length > 25){
-        nameEl.style.fontSize = "28px";
-    }
+    nameEl.style.fontSize = size + "px";
 
-    if(name.length > 35){
-        nameEl.style.fontSize = "22px";
+    while (
+        nameEl.scrollWidth > nameEl.parentElement.clientWidth - 40 &&
+        size > 20
+    ) {
+        size--;
+        nameEl.style.fontSize = size + "px";
     }
-}
+                }
         
     </script>
 </body>
